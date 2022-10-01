@@ -33,7 +33,7 @@ class Controls{
         document.onkeyup = (event) => {
             switch(event.key) {
                 case 'ArrowUp':
-                    this.forward = flase;
+                    this.forward = false;
                     break;
                 case 'ArrowLeft':
                     this.left = false;
