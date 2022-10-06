@@ -13,6 +13,7 @@ class Controls{
     #addKeyboardListeners() {
 
         document.onkeydown = (event) => {
+            
             switch(event.key) {
                 case 'ArrowUp':
                     this.forward = true;
@@ -27,7 +28,7 @@ class Controls{
                     this.reverse = true;
                     break;
             }   
-            console.table(this);
+
         }
 
         document.onkeyup = (event) => {
