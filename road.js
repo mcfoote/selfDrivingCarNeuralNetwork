@@ -20,6 +20,14 @@ class Road {
         ctx.lineWidth = 5;
         ctx.strokesStyle = 'white';
 
+        for(let i = 0; i <= this.laneCount; i++) {
+            const x = lerp (
+                this.left,
+                this.right,
+                i/this.laneCount
+            );
+        }
+
         ctx.beginPath();
         ctx.moveTo(this.left, this.top);
         ctx.lineTo(this.left, this.bottom);
@@ -31,5 +39,9 @@ class Road {
         ctx.stroke();
 
     }
-    
+
+}
+
+function lerp(A, B, t) {
+    return A + (B - A) * t;
 }
