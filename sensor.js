@@ -7,6 +7,34 @@ class Sensor {
         this.rayLength = 100;
         this.raySpread = Math.PI/4;
 
+        this.rays = [];
+
+    }
+
+    update() {
+
+        this.rays = [];
+
+        for(let i = 0; i < this.rayCount; i++) {
+
+            const rayAngle = lerp(
+                this.raySpread/2,
+                -this.rayspread/2,
+                i/(this.raycount-1)
+            );
+
+            const start = {x:this.car.x, y:this.car.y};
+            const end = {
+                x:this.car.x-
+                    Math.sin(rayAngle)*this.rayLength,
+                y:this.car.y-
+                    Math.cos(rayAngle)*this.rayLength,
+            };
+
+            this.rays.push([start, end]);
+
+        }
+
     }
 
 }
