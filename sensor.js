@@ -37,4 +37,17 @@ class Sensor {
 
     }
 
+    draw(ctx) {
+
+        for(let i = 0; i < this.rayCount; i++) {
+            ctx.beginPath();
+            ctx.lineWidth = 2;
+            ctx.strokeStyle = "yellow";
+            ctx.moveTo(
+                
+            )
+        }
+
+    }
+
 }
