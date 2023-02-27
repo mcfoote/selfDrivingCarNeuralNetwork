@@ -1,15 +1,7 @@
 class Sensor {
 
-    constructor() {
+    constructor(car) {
 
-    }
-
-    update() {
-
-    }
-
-    draw() {
-        
     }
 
 }
