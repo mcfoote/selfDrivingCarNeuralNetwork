@@ -29,6 +29,8 @@ class Sensor {
                 y:this.car.y-
                     Math.cos(rayAngle)*this.rayLength
             };
+
+            this.rays.push([start, end]);
         }
 
     }
