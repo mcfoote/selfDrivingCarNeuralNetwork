@@ -35,4 +35,8 @@ class Sensor {
 
     }
 
+    draw(ctx) {
+        
+    }
+
 }
