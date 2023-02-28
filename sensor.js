@@ -36,7 +36,9 @@ class Sensor {
     }
 
     draw(ctx) {
-        
+        for(let i=0; i<this.rayCount; i++) {
+            ctx.beginPath();
+        }
     }
 
 }
