@@ -49,6 +49,8 @@ class Sensor {
                 this.rays[i][1].x,
                 this.rays[i][1].y
             );
+
+            ctx.stroke();
         }
 
     }
