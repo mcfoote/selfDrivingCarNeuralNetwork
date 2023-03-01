@@ -13,6 +13,11 @@ class Sensor {
 
     update() {
 
+        this.#castRays();
+
+    }
+
+    #castRays() {
         this.rays = [];
 
         for(let i=0; i< this.rayCount; i++) {
@@ -32,7 +37,6 @@ class Sensor {
 
             this.rays.push([start, end]);
         }
-
     }
 
     draw(ctx) {
