@@ -34,6 +34,14 @@ class Sensor {
                 roadBorders[i][0],
                 roadBorders[i][1]
             );
+            if(touch){
+                touches.push(touch);
+            }
+        }
+
+        if((touches.length == 0)){
+            return null;
+        } else {
             
         }
 
