@@ -8,12 +8,34 @@ class Sensor {
         this.raySpread = Math.PI /2;
 
         this.rays = [];
+        this.readings = [];
 
     }
 
-    update() {
+    update(roadBorders) {
 
         this.#castRays();
+
+        this.readings = [];
+        for(let i = 0; i < this.rays.length; i++) {
+            this.readings.push(this.#getReading(this.rays[i], roadBorders));
+        }
+
+    }
+
+    #getReading(ray, roadBorders){
+
+        let touches = [];
+
+        for(let i = 0; i < roadBorders.length; i++){
+            const touch = getIntersection(
+                ray[0],
+                ray[1],
+                roadBorders[i][0],
+                roadBorders[i][1]
+            );
+            
+        }
 
     }
 
