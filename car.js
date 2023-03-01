@@ -74,6 +74,7 @@ class Car {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(-this.angle);
+        
         ctx.beginPath();
 
         ctx.rect(
