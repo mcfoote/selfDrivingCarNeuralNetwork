@@ -25,6 +25,15 @@ class Car {
 
     }
 
+    #createPolygon() {
+
+        const points = [];
+        const rad = Math.hypot(this.width, this.height) /2;
+
+        
+
+    }
+
     #move() {
         
         if(this.controls.forward) {
