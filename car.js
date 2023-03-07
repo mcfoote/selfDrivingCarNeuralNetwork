@@ -55,6 +55,14 @@ class Car {
     }
 
     #assessDamage(roadBorders) {
+
+        for(let i = 0; i < roadBorders.length; i++) {
+            if(polysIntersect(this.polygon, roadBorders[i])) {
+                return true;
+            }
+        }
+
+        return false;
         
     }
 
