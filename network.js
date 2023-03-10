@@ -21,6 +21,9 @@ class Level {
             }
         }
 
+        for(let i = 0; i < level.biases.length; i++) {
+            level.biases[i] = Math.random() * 2 - 1;
+        }
     }
 
 }
