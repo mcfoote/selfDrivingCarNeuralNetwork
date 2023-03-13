@@ -1,3 +1,11 @@
+class NeuralNetwork {
+
+    constructor(neuronCounts) {
+        this.levels = [];
+    }
+
+}
+
 class Level {
 
     constructor(inputCount, outputCount) {
