@@ -1,5 +1,6 @@
 class Visualizer{
-    static drawNetwork(ctx,network){
+    static drawNetwork(ctx,network) {
+
         const margin=50;
         const left=margin;
         const top=margin;
@@ -27,9 +28,11 @@ class Visualizer{
                     :[]
             );
         }
+
     }
 
-    static drawLevel(ctx,level,left,top,width,height,outputLabels){
+    static drawLevel(ctx,level,left,top,width,height,outputLabels) {
+
         const right=left+width;
         const bottom=top+height;
 
@@ -49,11 +52,14 @@ class Visualizer{
                 ctx.lineWidth=2;
                 ctx.strokeStyle=getRGBA(weights[i][j]);
                 ctx.stroke();
+
             }
         }
 
         const nodeRadius=18;
-        for(let i=0;i<inputs.length;i++){
+
+        for(let i=0;i<inputs.length;i++) {
+
             const x=Visualizer.#getNodeX(inputs,i,left,right);
             ctx.beginPath();
             ctx.arc(x,bottom,nodeRadius,0,Math.PI*2);
@@ -63,9 +69,11 @@ class Visualizer{
             ctx.arc(x,bottom,nodeRadius*0.6,0,Math.PI*2);
             ctx.fillStyle=getRGBA(inputs[i]);
             ctx.fill();
+
         }
         
-        for(let i=0;i<outputs.length;i++){
+        for(let i=0;i<outputs.length;i++) {
+
             const x=Visualizer.#getNodeX(outputs,i,left,right);
             ctx.beginPath();
             ctx.arc(x,top,nodeRadius,0,Math.PI*2);
@@ -95,10 +103,12 @@ class Visualizer{
                 ctx.lineWidth=0.5;
                 ctx.strokeText(outputLabels[i],x,top+nodeRadius*0.1);
             }
+
         }
     }
 
-    static #getNodeX(nodes,index,left,right){
+    static #getNodeX(nodes,index,left,right) {
+
         return lerp(
             left,
             right,
@@ -106,13 +116,16 @@ class Visualizer{
                 ?0.5
                 :index/(nodes.length-1)
         );
+
     }
 }
 
-function getRGBA(value){
+function getRGBA(value) {
+
     const alpha=Math.abs(value);
     const R=value<0?0:255;
     const G=R;
     const B=value>0?0:255;
     return "rgba("+R+","+G+","+B+","+alpha+")";
+    
 }
