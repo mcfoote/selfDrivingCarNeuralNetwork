@@ -1,4 +1,5 @@
-class Visualizer{
+class Visualizer {
+
     static drawNetwork(ctx,network) {
 
         const margin=50;
@@ -24,7 +25,7 @@ class Visualizer{
                 left,levelTop,
                 width,levelHeight,
                 i==network.levels.length-1
-                    ?['🠉','🠈','🠊','🠋']
+                    ?['up','left','right','down']
                     :[]
             );
         }
