@@ -36,26 +36,31 @@ function animate(time) {
         traffic[i].update(road.borders, []);
     }
 
-    car.update(road.borders, traffic);
+    for(let i = 0; i < cars.length; i++) {
+        cars[i].update(road.borders, traffic);
+    }
+    
 
     carCanvas.height = window.innerHeight;
     networkCanvas.height = window.innerHeight;
 
     carCtx.save();
-    carCtx.translate(0, -car.y + carCanvas.height * 0.7);
+    carCtx.translate(0, -cars[0].y + carCanvas.height * 0.7);
 
     road.draw(carCtx);
 
     for(let i = 0; i < traffic.length; i++) {
         traffic[i].draw(carCtx, "red");
     }
-1`  `
-    car.draw(carCtx, "blue");
+
+    for(let i = 0; i < cars.length; i++) {
+        cars[i].draw(carCtx, "blue");
+    }
 
     carCtx.restore();
 
     networkCtx.lineDashOffset = -time/60;
-    Visualizer.drawNetwork(networkCtx, car.brain);
+    Visualizer.drawNetwork(networkCtx, cars[0].brain);
 
     requestAnimationFrame(animate);
 
