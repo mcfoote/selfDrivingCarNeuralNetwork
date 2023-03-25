@@ -17,6 +17,15 @@ const traffic = [
 
 animate();
 
+function generateCars(N) {
+
+    const cars = [];
+    for(let i = 1; i < N; i++) {
+        
+    }
+
+}
+
 function animate(time) {
 
     for(let i = 0; i < traffic.length; i++) {
@@ -36,7 +45,7 @@ function animate(time) {
     for(let i = 0; i < traffic.length; i++) {
         traffic[i].draw(carCtx, "red");
     }
-
+1`  `
     car.draw(carCtx, "blue");
 
     carCtx.restore();
