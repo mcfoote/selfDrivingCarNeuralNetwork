@@ -53,9 +53,13 @@ function animate(time) {
         traffic[i].draw(carCtx, "red");
     }
 
+    carCtx.globalAlpha = 0.2;
+
     for(let i = 0; i < cars.length; i++) {
         cars[i].draw(carCtx, "blue");
     }
+
+    carCtx.globalAlpha = 1;
 
     carCtx.restore();
 
