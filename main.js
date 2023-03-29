@@ -84,17 +84,17 @@ function animate(time) {
     road.draw(carCtx);
 
     for(let i = 0; i < traffic.length; i++) {
-        traffic[i].draw(carCtx, "red");
+        traffic[i].draw(carCtx, "orange");
     }
 
     carCtx.globalAlpha = 0.2;
 
     for(let i = 0; i < cars.length; i++) {
-        cars[i].draw(carCtx, "blue");
+        cars[i].draw(carCtx, "green");
     }
 
     carCtx.globalAlpha = 1;
-    bestCar.draw(carCtx, "blue", true);
+    bestCar.draw(carCtx, "green", true);
 
     carCtx.restore();
 
