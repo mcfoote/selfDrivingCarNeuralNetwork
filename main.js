@@ -90,11 +90,11 @@ function animate(time) {
     carCtx.globalAlpha = 0.2;
 
     for(let i = 0; i < cars.length; i++) {
-        cars[i].draw(carCtx, "green");
+        cars[i].draw(carCtx, "purple");
     }
 
     carCtx.globalAlpha = 1;
-    bestCar.draw(carCtx, "green", true);
+    bestCar.draw(carCtx, "purple", true);
 
     carCtx.restore();
 
